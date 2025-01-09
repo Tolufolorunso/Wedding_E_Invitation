@@ -1,19 +1,19 @@
-import connectMongoDB from "@/db/connectMongoDB";
-import Invitee from "@/model/invitees";
-import AddInviteeForm from "../_components/add-invitee-form";
-import Table from "../_components/table";
+import connectMongoDB from '@/db/connectMongoDB';
+import Invitee from '@/model/invitees';
+import AddInviteeForm from '../_components/add-invitee-form';
+import Table from '../_components/table';
 
 export default async function Home() {
   await connectMongoDB();
   let invitees = await Invitee.find();
-
+  console.log(invitees);
   return (
     <div className="container-fluid py-5" id="rsvp">
       <div className="container py-5">
         <div className="section-title position-relative text-center">
           <h6
             className="text-uppercase text-primary mb-3"
-            style={{ letterSpacing: "3px" }}
+            style={{ letterSpacing: '3px' }}
           >
             Invitation page
           </h6>
