@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 const photos = [
   {
@@ -42,22 +43,24 @@ const photos = [
 ];
 
 function GalleryPage() {
-  const navigateBackToIV = () => {
-    console.log('ey');
-  };
+  const searchParams = useSearchParams();
+  const id = searchParams.get('id');
+
+  const route = useRouter();
+
   return (
     <>
       <nav className="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark d-block">
-        <h1
-          className="font-secondary text-white text-center cursor-pointer"
-          onClick={navigateBackToIV}
-        >
-          Sewa <span className="text-primary">&</span> Femi
+        <h1 className="font-secondary text-white text-center cursor-pointer">
+          Fẹ́mi <span className="text-primary">&</span> Ṣẹwà
         </h1>
       </nav>
       <div className="app_gallery">
+        <p className="cursor-pointer" onClick={() => route.push(`/${id}`)}>
+          Go Back to RSVP
+        </p>
         <motion.h1
-          className="title"
+          className="title text-primary"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}

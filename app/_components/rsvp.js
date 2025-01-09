@@ -74,7 +74,7 @@ function Rsvp({ name, id }) {
                       onChange={handleOnchange}
                     >
                       <option selected disabled>
-                        Number of Guest of yours
+                        Number of your guest
                       </option>
                       <option value={0}>0</option>
                       <option value={1}>1</option>

@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation';
 import Rsvp from '../_components/rsvp';
 import FamilyFriend from '../_components/friends_family';
 import Link from 'next/link';
+import Nav from '../_components/nav';
 
 async function InvitationPage({ params }) {
   const inviteeID = (await params).inviteeID;
@@ -19,57 +20,7 @@ async function InvitationPage({ params }) {
 
   return (
     <>
-      <nav className="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
-        <a href="index.html" className="navbar-brand d-block d-lg-none">
-          <h1 className="font-secondary text-white mb-n2">
-            Adesewa <span className="text-primary">&</span> Oluwafemi
-          </h1>
-        </a>
-        <button
-          type="button"
-          className="navbar-toggler"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div
-          className="collapse navbar-collapse justify-content-between"
-          id="navbarCollapse"
-        >
-          <div className="navbar-nav ml-auto py-0">
-            <span className="nav-item nav-link active">Home</span>
-            <a href="#about" className="nav-item nav-link">
-              About
-            </a>
-            <a href="#story" className="nav-item nav-link">
-              Story
-            </a>
-            <Link href="/gallery" className="nav-item nav-link">
-              Gallery
-            </Link>
-          </div>
-          <div href="/" className="navbar-brand mx-5 d-none d-lg-block">
-            <h1 className="font-secondary text-white mb-n2">
-              Sewa <span className="text-primary">&</span> Femi
-            </h1>
-          </div>
-          <div className="navbar-nav mr-auto py-0">
-            <a href="#family" className="nav-item nav-link">
-              Family
-            </a>
-            <a href="#event" className="nav-item nav-link">
-              Event
-            </a>
-            <a href="#rsvp" className="nav-item nav-link">
-              RSVP
-            </a>
-            <a href="#contact" className="nav-item nav-link">
-              Contact
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Nav id={invitee._id} />
       {/* Carousel Start  */}
       <div className="container-fluid p-0 mb-5 pb-5" id="home">
         <div
@@ -91,7 +42,7 @@ async function InvitationPage({ params }) {
               <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div className="p-3" style={{ maxWidth: '900px' }}>
                   <h1 className="display-1 font-secondary text-white mt-n3 mb-md-4">
-                    Sewa & Femi
+                    Femi & Sewa
                   </h1>
                   <div className="d-inline-block border-top border-bottom border-light py-3 px-4">
                     <h3
@@ -416,8 +367,8 @@ async function InvitationPage({ params }) {
             <div className="col-md-6 text-center">
               <h5 className="font-weight-normal text-muted mb-3 pb-3">
                 Join us as we celebrate the union of{' '}
-                <span className="text-primary">Adesewa</span> and{' '}
-                <span className="text-primary">Oluwafemi</span> in an
+                <span className="text-primary">Oluwafemi</span> and{' '}
+                <span className="text-primary">Adesewa</span> in an
                 unforgettable evening of love, laughter, and joy. Surrounded by
                 friends and family, we will exchange our vows and begin our new
                 life together.
