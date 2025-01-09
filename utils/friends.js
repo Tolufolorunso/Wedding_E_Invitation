@@ -28,25 +28,25 @@ const friends = [
     type: 'groom',
   },
   {
-    name: 'Tolulope Folorunso',
+    name: 'Ore Iyawo name',
     img: 'https://placehold.co/600x400',
     friend: 'Best friend',
     social: ['#x', '#facebook', '#Linkedin', '#instergram'],
-    type: 'groom',
+    type: 'bride',
   },
   {
-    name: 'Tolulope Folorunso',
+    name: 'Ore Iyawo name',
     img: 'https://placehold.co/600x400',
     friend: 'Best friend',
     social: ['#x', '#facebook', '#Linkedin', '#instergram'],
-    type: 'groom',
+    type: 'bride',
   },
   {
-    name: 'Tolulope Folorunso',
+    name: 'Ore Iyawo name',
     img: 'https://placehold.co/600x400',
     friend: 'Best friend',
     social: ['#x', '#facebook', '#Linkedin', '#instergram'],
-    type: 'groom',
+    type: 'bride',
   },
 ];
 

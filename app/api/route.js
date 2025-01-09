@@ -1,5 +1,5 @@
-import connectMongoDB from "@/db/connectMongoDB";
-import Invitee from "@/model/invitees";
+import connectMongoDB from '@/db/connectMongoDB';
+import Invitee from '@/model/invitees';
 
 export async function POST(request) {
   const { firstname, lastname } = await request.json();
@@ -8,7 +8,7 @@ export async function POST(request) {
 
   if (!firstname || !lastname) {
     return Response.json(
-      { status: false, errorMessage: "Please provide all fields" },
+      { status: false, errorMessage: 'Please provide all fields' },
       { status: 400 }
     );
   }
@@ -22,12 +22,48 @@ export async function POST(request) {
     newInvitee.url = `${baseURL}/${newInvitee._id}`;
     await newInvitee.save();
     return Response.json(
-      { message: "Invitee added successfully", status: true },
+      { message: 'Invitee added successfully', status: true },
       { status: 201 }
     );
   } catch (error) {
     return Response.json(
-      { status: false, errorMessage: "Something went wrong" },
+      { status: false, errorMessage: 'Something went wrong' },
+      { status: 500 }
+    );
+  }
+}
+
+export async function PATCH(request) {
+  let { id, rsvp, message, numberOfGuest } = await request.json();
+  await connectMongoDB();
+
+  message = message || 'No Message';
+
+  console.log(id, rsvp, message, numberOfGuest);
+
+  if (!id || !rsvp) {
+    return Response.json(
+      { status: false, errorMessage: 'Please provide all fields' },
+      { status: 400 }
+    );
+  }
+
+  try {
+    const updatedRsvp = await Invitee.findByIdAndUpdate(
+      { _id: '677d8eab91fcfabfe3265e09' },
+      { rsvp, message, numberOfGuest: numberOfGuest || 0 },
+      { new: true }
+    );
+
+    console.log(updatedRsvp);
+
+    return Response.json(
+      { message: 'RSVP added successfully', status: true },
+      { status: 200 }
+    );
+  } catch (error) {
+    return Response.json(
+      { status: false, errorMessage: 'Something went wrong' },
       { status: 500 }
     );
   }
@@ -45,12 +81,12 @@ export async function GET(request) {
     newInvitee.url = `${baseURL}/${newInvitee._id}`;
     await newInvitee.save();
     return Response.json(
-      { message: "Invitee added successfully", status: true },
+      { message: 'Invitee added successfully', status: true },
       { status: 201 }
     );
   } catch (error) {
     return Response.json(
-      { status: false, errorMessage: "Something went wrong" },
+      { status: false, errorMessage: 'Something went wrong' },
       { status: 500 }
     );
   }

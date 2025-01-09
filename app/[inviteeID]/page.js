@@ -2,7 +2,8 @@ import connectMongoDB from '@/db/connectMongoDB';
 import Invitee from '@/model/invitees';
 import { redirect } from 'next/navigation';
 import Rsvp from '../_components/rsvp';
-import Portfolio from '../_components/portfolio';
+import FamilyFriend from '../_components/friends_family';
+import Link from 'next/link';
 
 async function InvitationPage({ params }) {
   const inviteeID = (await params).inviteeID;
@@ -18,7 +19,7 @@ async function InvitationPage({ params }) {
 
   return (
     <>
-      {/* <nav className="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+      <nav className="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
         <a href="index.html" className="navbar-brand d-block d-lg-none">
           <h1 className="font-secondary text-white mb-n2">
             Adesewa <span className="text-primary">&</span> Oluwafemi
@@ -37,24 +38,22 @@ async function InvitationPage({ params }) {
           id="navbarCollapse"
         >
           <div className="navbar-nav ml-auto py-0">
-            <a href="#home" className="nav-item nav-link active">
-              Home
-            </a>
+            <span className="nav-item nav-link active">Home</span>
             <a href="#about" className="nav-item nav-link">
               About
             </a>
             <a href="#story" className="nav-item nav-link">
               Story
             </a>
-            <a href="#gallery" className="nav-item nav-link">
+            <Link href="/gallery" className="nav-item nav-link">
               Gallery
-            </a>
+            </Link>
           </div>
-          <a href="index.html" className="navbar-brand mx-5 d-none d-lg-block">
+          <div href="/" className="navbar-brand mx-5 d-none d-lg-block">
             <h1 className="font-secondary text-white mb-n2">
-              Jack <span className="text-primary">&</span> Rose
+              Sewa <span className="text-primary">&</span> Femi
             </h1>
-          </a>
+          </div>
           <div className="navbar-nav mr-auto py-0">
             <a href="#family" className="nav-item nav-link">
               Family
@@ -70,8 +69,7 @@ async function InvitationPage({ params }) {
             </a>
           </div>
         </div>
-      </nav> */}
-
+      </nav>
       {/* Carousel Start  */}
       <div className="container-fluid p-0 mb-5 pb-5" id="home">
         <div
@@ -199,10 +197,10 @@ async function InvitationPage({ params }) {
               <div className="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
                 <h3 className="mb-3">The Groom</h3>
                 <p>
-                  Lorem elitr magna stet rebum dolores sed. Est stet labore est
-                  lorem lorem at amet sea, eos tempor rebum, labore amet ipsum
-                  sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet
-                  est dolor elitr.
+                  The groom is a kind-hearted and charming soul, whose love,
+                  strength, and unwavering commitment light up every room. With
+                  a warm smile and a caring nature, he is the perfect partner to
+                  embark on this beautiful journey of love and togetherness.
                 </p>
                 <h3 className="font-secondary font-weight-normal text-muted mb-3">
                   <i className="fa fa-male text-primary pr-3"></i>Oluwafemi
@@ -260,10 +258,10 @@ async function InvitationPage({ params }) {
               <div className="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
                 <h3 className="mb-3">The Bride</h3>
                 <p>
-                  Lorem elitr magna stet rebum dolores sed. Est stet labore est
-                  lorem lorem at amet sea, eos tempor rebum, labore amet ipsum
-                  sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet
-                  est dolor elitr.
+                  The bride is a radiant and graceful presence, whose kindness
+                  and joy touch everyone around her. With a heart full of love
+                  and a spirit that inspires, she is the embodiment of beauty
+                  and elegance, ready to begin this wonderful chapter of life.
                 </p>
                 <h3 className="font-secondary font-weight-normal text-muted mb-3">
                   <i className="fa fa-female text-primary pr-3"></i>Adesewa
@@ -449,45 +447,12 @@ async function InvitationPage({ params }) {
       {/* Event End */}
 
       {/* Friends & Family Start */}
-      <div className="container-fluid py-5" id="family">
-        <div className="container pt-5 pb-3">
-          <div className="section-title position-relative text-center">
-            <h6
-              className="text-uppercase text-primary mb-3"
-              style={{ letterSpacing: '3px' }}
-            >
-              Friends & Family
-            </h6>
-            <h1 className="font-secondary display-4">
-              Men in Agbada & Bridesmaid
-            </h1>
-            <i className="far fa-heart text-dark"></i>
-          </div>
-          <div className="row">
-            <div className="col-12 text-center mb-2">
-              <ul className="list-inline mb-4" id="portfolio-flters">
-                <li
-                  className="btn btn-outline-primary font-weight-bold m-1 py-2 px-4"
-                  data-filter=".first"
-                >
-                  Men in Agbada
-                </li>
-                <li
-                  className="btn btn-outline-primary font-weight-bold m-1 py-2 px-4"
-                  data-filter=".second"
-                >
-                  Bridesmaid
-                </li>
-              </ul>
-            </div>
-          </div>
-          <Portfolio />
-        </div>
-      </div>
+      <FamilyFriend />
       {/* Friends & Family End */}
 
       {/* RSVP Start */}
       <Rsvp
+        id={invitee._id}
         name={`${invitee.firstname.toUpperCase()} ${invitee.lastname.toUpperCase()}`}
       />
       {/* RSVP End */}
