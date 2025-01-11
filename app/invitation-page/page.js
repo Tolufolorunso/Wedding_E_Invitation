@@ -3,6 +3,8 @@ import Invitee from '@/model/invitees';
 import AddInviteeForm from '../_components/add-invitee-form';
 import Table from '../_components/table';
 
+export const revalidate = 0;
+
 async function getAllInvitees() {
   await connectMongoDB();
   let invitees = await Invitee.find();
