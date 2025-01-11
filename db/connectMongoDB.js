@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const connectMongoDB = async () => {
   let mongodb_uri;
-  if (process.env.NEXT_ENV === 'developmen') {
+  if (process.env.NEXT_ENV === 'development') {
     mongodb_uri = process.env.MONGODB_URI_LOCAL;
   } else {
     mongodb_uri = process.env.MONGODB_URI;

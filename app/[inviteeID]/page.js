@@ -8,7 +8,7 @@ import Nav from '../_components/nav';
 async function InvitationPage({ params }) {
   const inviteeID = (await params).inviteeID;
 
-  // await connectMongoDB();
+  await connectMongoDB();
 
   let invitee = await Invitee.findById(inviteeID);
   console.log(invitee);
