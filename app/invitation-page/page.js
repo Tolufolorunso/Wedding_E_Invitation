@@ -3,10 +3,14 @@ import Invitee from '@/model/invitees';
 import AddInviteeForm from '../_components/add-invitee-form';
 import Table from '../_components/table';
 
-export default async function Home() {
+async function getAllInvitees() {
   await connectMongoDB();
   let invitees = await Invitee.find();
-  console.log(invitees);
+  return invitees;
+}
+
+export default async function Home() {
+  const invitees = await getAllInvitees();
   return (
     <div className="container-fluid py-5" id="rsvp">
       <div className="container py-5">

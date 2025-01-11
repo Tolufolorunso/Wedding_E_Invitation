@@ -1,14 +1,13 @@
-"use client";
+'use client';
 
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
 
 const Table = ({ data }) => {
   const handleCopy = (url) => {
     navigator.clipboard.writeText(url).then(() => {
-      toast.info("URL copied to clipboard!");
+      toast.info('URL copied to clipboard!');
     });
   };
-
   data = JSON.parse(data);
 
   return (

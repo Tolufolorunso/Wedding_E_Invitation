@@ -39,8 +39,6 @@ export async function PATCH(request) {
 
   message = message || 'No Message';
 
-  console.log(id, rsvp, message, numberOfGuest);
-
   if (!id || !rsvp) {
     return Response.json(
       { status: false, errorMessage: 'Please provide all fields' },

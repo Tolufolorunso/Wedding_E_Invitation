@@ -3,13 +3,12 @@ import Invitee from '@/model/invitees';
 import { redirect } from 'next/navigation';
 import Rsvp from '../_components/rsvp';
 import FamilyFriend from '../_components/friends_family';
-import Link from 'next/link';
 import Nav from '../_components/nav';
 
 async function InvitationPage({ params }) {
   const inviteeID = (await params).inviteeID;
 
-  await connectMongoDB();
+  // await connectMongoDB();
 
   let invitee = await Invitee.findById(inviteeID);
   console.log(invitee);
