@@ -58,7 +58,7 @@ async function InvitationPage({ params }) {
                     >
                       You're cordially Invited: <br />
                       <span className="pt-1 small font-italic">
-                        {'Tolulope Folorunso'}
+                        {`${invitee.firstname} ${invitee.lastname}`}
                       </span>
                     </h3>
                   </div>

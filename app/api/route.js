@@ -1,6 +1,8 @@
 import connectMongoDB from '@/db/connectMongoDB';
 import Invitee from '@/model/invitees';
 
+export const revalidate = 0;
+
 export async function POST(request) {
   const { firstname, lastname } = await request.json();
   const baseURL = request.nextUrl.origin;
