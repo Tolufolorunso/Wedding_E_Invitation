@@ -1,5 +1,6 @@
 'use client';
 import groomBridefriends from '@/utils/friends';
+import Image from 'next/image';
 import { useState } from 'react';
 
 function FamilyFriend() {
@@ -15,9 +16,7 @@ function FamilyFriend() {
           >
             Friends & Family
           </h6>
-          <h1 className="font-secondary display-4">
-            Men in Agbada & Bridesmaid
-          </h1>
+          <h1 className="font-secondary display-4">Groomsmen & Bridesmaid</h1>
           <i className="far fa-heart text-dark"></i>
         </div>
         <div className="row">
@@ -29,7 +28,7 @@ function FamilyFriend() {
                 } font-weight-bold m-1 py-2 px-4`}
                 onClick={() => setType('groom')}
               >
-                Men in Agbada
+                Groomsmen
               </li>
               <li
                 className={`btn ${
@@ -58,21 +57,53 @@ function FamilyFriend() {
                 }}
               >
                 <div className="position-relative mb-2">
-                  <img className="img-fluid w-100" src={friend.img} alt="" />
+                  <div style={{ height: '400px' }}>
+                    <img
+                      className="img-fluid w-100 h-100"
+                      style={{ objectFit: 'cover' }}
+                      src={friend.img}
+                      alt={friend.name}
+                    />
+                  </div>
+
                   <div className="bg-secondary text-center p-4">
-                    <h4 className="mb-3">{friend.name}</h4>
+                    <h5 className="mb-3">{friend.name}</h5>
                     <p className="text-uppercase">{friend.friend}</p>
                     <div className="d-inline-block">
-                      <a className="mx-2" href={friend.social[0]}>
+                      <a
+                        className="mx-2"
+                        href={friend.social[0]}
+                        target={
+                          friend.social[0].includes('#') ? '_self' : '_blank'
+                        }
+                      >
                         <i className="fab fa-twitter"></i>
                       </a>
-                      <a className="mx-2" href={friend.social[1]}>
+                      <a
+                        className="mx-2"
+                        href={friend.social[1]}
+                        target={
+                          friend.social[1].includes('#') ? '_self' : '_blank'
+                        }
+                      >
                         <i className="fab fa-facebook-f"></i>
                       </a>
-                      <a className="mx-2" href={friend.social[2]}>
+                      <a
+                        className="mx-2"
+                        href={friend.social[2]}
+                        target={
+                          friend.social[2].includes('#') ? '_self' : '_blank'
+                        }
+                      >
                         <i className="fab fa-linkedin-in"></i>
                       </a>
-                      <a className="mx-2" href={friend.social[3]}>
+                      <a
+                        className="mx-2"
+                        href={friend.social[3]}
+                        target={
+                          friend.social[3].includes('#') ? '_self' : '_blank'
+                        }
+                      >
                         <i className="fab fa-instagram"></i>
                       </a>
                     </div>

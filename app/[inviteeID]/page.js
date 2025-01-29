@@ -34,7 +34,7 @@ async function InvitationPage({ params }) {
             >
               <img
                 className="position-absolute w-100 h-100"
-                src="img/carousel-1.jpg"
+                src="img/carousel-4.jpg"
                 style={{ objectFit: 'cover' }}
                 alt="carousel-1"
               />
@@ -378,16 +378,21 @@ async function InvitationPage({ params }) {
             <div className="col-md-6 border-right border-primary">
               <div className="text-center text-md-right mr-md-3 mb-4 mb-md-0">
                 <img className="img-fluid mb-4" src="img/event-1.jpg" alt="" />
-                <h4 className="mb-3">The Reception</h4>
-                <p className="mb-2">1 Okelogbo Street, Ekiti, Nigeria</p>
-                <p className="mb-0">12:00AM - 13:00PM</p>
+                <h4 className="mb-3">Church Service</h4>
+                <p className="mb-2">
+                  @St. Peter's Anglican Church, Ipere Ekiti,Ilejemeje LG.
+                  Nigeria
+                </p>
+                <p className="mb-0">Time: 8:00am</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="text-center text-md-left ml-md-3">
                 <img className="img-fluid mb-4" src="img/event-2.jpg" alt="" />
-                <h4 className="mb-3">Church Service</h4>
-                <p className="mb-2">1 Okelogbo Street, Ekiti, Nigeria</p>
+                <h4 className="mb-3">Engagement / Reception</h4>
+                <p className="mb-2">
+                  @ Ijemo Street, Ipere Ekiti Ekiti, Nigeria
+                </p>
                 <p className="mb-0">12:00AM - 13:00PM</p>
               </div>
             </div>
