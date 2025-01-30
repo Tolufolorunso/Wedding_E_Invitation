@@ -1,7 +1,7 @@
 const friends = [
   {
-    name: 'Engr. Samuel Adeyemi',
-    img: 'img/samuel_bestman.jpg',
+    name: 'Hon. Temidayo Ayeni',
+    img: 'img/ayeni.jpg',
     friend: 'Best Man',
     social: ['#x', '#facebook', '#Linkedin', '#instergram'],
     type: 'groom',
@@ -28,6 +28,13 @@ const friends = [
       'https://www.linkedin.com/in/tolufolorunso/',
       'https://www.instagram.com/developer_tolu/',
     ],
+    type: 'groom',
+  },
+  {
+    name: 'Engr. Samuel Adeyemi',
+    img: 'img/samuel_bestman.jpg',
+    friend: 'Best Friend',
+    social: ['#x', '#facebook', '#Linkedin', '#instergram'],
     type: 'groom',
   },
   {
@@ -59,12 +66,20 @@ const friends = [
     type: 'groom',
   },
   {
+    name: 'Mr. Ibrahim Akeem',
+    img: 'https://placehold.co/600x400',
+    friend: 'Best friend',
+    social: ['#x', '#facebook', '#Linkedin', '#instergram'],
+    type: 'groom',
+  },
+  {
     name: 'Mr. Alaba Adekunle',
     img: 'https://placehold.co/600x400',
     friend: 'Best friend',
     social: ['#x', '#facebook', '#Linkedin', '#instergram'],
     type: 'groom',
   },
+
   {
     name: 'Ore Iyawo name',
     img: 'https://placehold.co/600x400',

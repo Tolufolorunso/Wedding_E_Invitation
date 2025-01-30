@@ -59,20 +59,20 @@ function GalleryContent() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        Our Pre-Wedding Moments
+        Special Moments
       </motion.h1>
       <div className="gallery">
-        {photos.map((photo) => (
+        {[...new Array(16)].map((_, index) => (
           <motion.div
             className="gallery-item"
-            key={photo.id}
+            key={index}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <div className="image-container">
-              <img src={photo.src} alt={photo.alt} />
+              <img src={`/img/gal/femi${index}.jpg`} alt="Femi and his wife" />
               <div className="info-overlay">
-                <p>{photo.info}</p>
+                <p>Femi and his wife{index}</p>
               </div>
             </div>
           </motion.div>

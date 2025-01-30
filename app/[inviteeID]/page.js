@@ -271,12 +271,13 @@ async function InvitationPage({ params }) {
               <div className="col-md-6 text-center text-md-left">
                 <div className="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
                   <h4 className="mb-2">First Meet</h4>
-                  <p className="text-uppercase mb-2">01 Jan 2050</p>
+                  <p className="text-uppercase mb-2">25th August, 2019</p>
                   <p className="m-0">
-                    Lorem elitr magna stet rebum dolores sed. Est stet labore
-                    est lorem lorem at amet sea, eos tempor rebum, labore amet
-                    ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd
-                    stet amet est dolor elitr.
+                    On August 25th, 2019, two paths crossed and a beautiful
+                    story unfolded. It was the day our hearts first connected,
+                    sparking a journey of love, laughter, and endless
+                    possibilities. Little did we know, that moment would change
+                    everything.
                   </p>
                 </div>
               </div>
@@ -285,40 +286,58 @@ async function InvitationPage({ params }) {
               <div className="col-md-6 text-center text-md-right">
                 <div className="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
                   <h4 className="mb-2">First Date</h4>
-                  <p className="text-uppercase mb-2">01 Jan 2050</p>
+                  <p className="text-uppercase mb-2">7th Sep, 2019</p>
                   <p className="m-0">
-                    Lorem elitr magna stet rebum dolores sed. Est stet labore
-                    est lorem lorem at amet sea, eos tempor rebum, labore amet
-                    ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd
-                    stet amet est dolor elitr.
+                    On September 7th, 2019, we took our first step into a world
+                    of shared smiles and heartfelt conversations. It was a day
+                    filled with butterflies, laughter, and the beginning of
+                    something truly magical. Our first date marked the start of
+                    a love story we’ll cherish forever.
                   </p>
                 </div>
               </div>
-              <div className="col-md-6 text-center text-md-left">
+              <div
+                className="col-md-6 text-center text-md-left"
+                style={{ width: '300px !important', height: '300px' }}
+              >
                 <img
                   className="img-fluid ml-md-3"
                   src="img/story-2.jpg"
                   alt=""
+                  style={{
+                    width: '100% !important',
+                    height: '100%',
+                    objectFit: 'cover',
+                  }}
                 />
               </div>
             </div>
             <div className="row">
-              <div className="col-md-6 text-center text-md-right">
+              <div
+                className="col-md-6 text-center text-md-right"
+                style={{ width: '300px !important', height: '300px' }}
+              >
                 <img
                   className="img-fluid mr-md-3"
                   src="img/story-3.jpg"
                   alt=""
+                  style={{
+                    width: '100% !important',
+                    height: '100%',
+                    objectFit: 'cover',
+                  }}
                 />
               </div>
               <div className="col-md-6 text-center text-md-left">
                 <div className="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
                   <h4 className="mb-2">Proposal</h4>
-                  <p className="text-uppercase mb-2">01 Jan 2050</p>
+                  <p className="text-uppercase mb-2">10th Oct. 2020</p>
                   <p className="m-0">
-                    Lorem elitr magna stet rebum dolores sed. Est stet labore
-                    est lorem lorem at amet sea, eos tempor rebum, labore amet
-                    ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd
-                    stet amet est dolor elitr.
+                    On October 10th, 2020, our hearts found their forever home.
+                    With love as our guide, we took the first step into a
+                    lifetime of shared dreams and endless happiness. This is
+                    where our story began, and we’re so grateful to have you be
+                    a part of it.
                   </p>
                 </div>
               </div>
@@ -327,12 +346,13 @@ async function InvitationPage({ params }) {
               <div className="col-md-6 text-center text-md-right">
                 <div className="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
                   <h4 className="mb-2">Engagement</h4>
-                  <p className="text-uppercase mb-2">01 Jan 2050</p>
+                  <p className="text-uppercase mb-2">5th April, 2025</p>
                   <p className="m-0">
-                    Lorem elitr magna stet rebum dolores sed. Est stet labore
-                    est lorem lorem at amet sea, eos tempor rebum, labore amet
-                    ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd
-                    stet amet est dolor elitr.
+                    Join us as we celebrate a day filled with love and joy on
+                    April 5th, 2025! Together, let’s create unforgettable
+                    memories and cherish every moment. Your presence will make
+                    this day even more special. We can’t wait to share this
+                    beautiful journey with you!
                   </p>
                 </div>
               </div>
