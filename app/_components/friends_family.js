@@ -1,5 +1,5 @@
 'use client';
-import groomBridefriends from '@/utils/friends';
+import groomBridefriends, { babies, bridegroom } from '@/utils/friends';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -14,13 +14,87 @@ function FamilyFriend() {
             className="text-uppercase text-primary mb-3"
             style={{ letterSpacing: '3px' }}
           >
-            Friends & Family
+            Families and Friends
           </h6>
-          <h1 className="font-secondary display-4">Groomsmen & Bridesmaid</h1>
+          <h1 className="font-secondary display-4">Our Squad</h1>
           <i className="far fa-heart text-dark"></i>
         </div>
+        <div className="mt-4 mb-5">
+          <h4 className="font-secondary display-6 text-center mb-2">
+            Little Bride & Ring Bearer
+          </h4>
+          <div className="row portfolio-container mb-4">
+            {babies.map((friend, index) => {
+              return (
+                <div className="col-lg-6 col-md-6 position-relative mb-2">
+                  <div
+                    style={{
+                      height: '500px',
+                    }}
+                  >
+                    <img
+                      className="img-fluid w-100 h-100"
+                      style={{
+                        objectFit: 'cover',
+                        objectPosition: 'center top',
+                      }}
+                      src={friend.img}
+                      alt={friend.name}
+                    />
+                  </div>
+                  <div className="bg-secondary text-center p-3">
+                    <h5 className="mb-2">{friend.name}</h5>
+                    <p className="text-uppercase">{friend.friend}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="mt-4 mb-5">
+          <h4 className="font-secondary display-6 text-center mb-2">
+            Chief Bridesmaid & Best Man
+          </h4>
+          <div className="row portfolio-container mb-4">
+            {bridegroom.map((friend, index) => {
+              return (
+                <div
+                  className="col-lg-6 col-md-6  portfolio-item first"
+                  key={index}
+                  style={{
+                    display:
+                      type === ''
+                        ? 'block'
+                        : type === friend.type
+                        ? 'block'
+                        : 'none',
+                  }}
+                >
+                  <div className="position-relative mb-2">
+                    <div style={{ height: '500px' }}>
+                      <img
+                        className="img-fluid w-100 h-100"
+                        style={{
+                          objectFit: 'cover',
+                          objectPosition: ' top',
+                        }}
+                        src={friend.img}
+                        alt={friend.name}
+                      />
+                    </div>
+
+                    <div className="bg-secondary text-center p-3">
+                      <h5 className="mb-2">{friend.name}</h5>
+                      <p className="text-uppercase">{friend.friend}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
         <div className="row">
-          <div className="col-12 text-center mb-2">
+          <div className="col-12 text-center mb-1">
             <ul className="list-inline mb-4" id="portfolio-flters">
               <li
                 className={`btn ${
@@ -41,7 +115,7 @@ function FamilyFriend() {
             </ul>
           </div>
         </div>
-        <div className="row portfolio-container">
+        <div className="row portfolio-contai">
           {groomBridefriends.map((friend, index) => {
             return (
               <div
@@ -60,7 +134,7 @@ function FamilyFriend() {
                   <div style={{ height: '400px' }}>
                     <img
                       className="img-fluid w-100 h-100"
-                      style={{ objectFit: 'cover' }}
+                      style={{ objectFit: 'cover', objectPosition: ' top' }}
                       src={friend.img}
                       alt={friend.name}
                     />

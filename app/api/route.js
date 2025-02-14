@@ -4,7 +4,7 @@ import Invitee from '@/model/invitees';
 export const revalidate = 0;
 
 export async function POST(request) {
-  const { firstname, lastname } = await request.json();
+  let { firstname, lastname, title } = await request.json();
   const baseURL = request.nextUrl.origin;
   await connectMongoDB();
 
@@ -15,10 +15,18 @@ export async function POST(request) {
     );
   }
 
+  firstname =
+    firstname.charAt(0).toUpperCase() + firstname.slice(1).toLowerCase();
+  lastname = lastname.charAt(0).toUpperCase() + lastname.slice(1).toLowerCase();
+  title = title.charAt(0).toUpperCase() + title.slice(1).toLowerCase();
+
+  let fullname = `${title} ${firstname} ${lastname}`;
+
   try {
     const newInvitee = new Invitee({
       firstname,
       lastname,
+      fullname,
     });
 
     newInvitee.url = `${baseURL}/${newInvitee._id}`;
@@ -54,8 +62,6 @@ export async function PATCH(request) {
       { rsvp, message, numberOfGuest: numberOfGuest || 0 },
       { new: true }
     );
-
-    console.log(updatedRsvp);
 
     return Response.json(
       { message: 'RSVP added successfully', status: true },

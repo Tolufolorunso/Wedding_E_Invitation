@@ -1,6 +1,6 @@
-"use client";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+'use client';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 export default function Home() {
   const [pass, setPass] = useState();
@@ -10,8 +10,8 @@ export default function Home() {
   const login = () => {
     if (pin === Number(pass)) {
       localStorage.clear();
-      localStorage.setItem("pass", "pass");
-      return router.replace("/invitation-page");
+      localStorage.setItem('pass', 'pass');
+      return router.replace('/invitation-page');
     }
   };
 
@@ -19,7 +19,7 @@ export default function Home() {
     <div className="container-fluid py-5" id="rsvp">
       <div className="container py-5">
         <div className="section-title position-relative text-center">
-          <h1 className="font-secondary display-4">Adesewa and Oluwafemi</h1>
+          <h1 className="font-secondary display-4">Oluwafemi and Adesewa</h1>
           <i className="far fa-heart text-dark"></i>
         </div>
         <div className="row justify-content-center">
@@ -30,7 +30,7 @@ export default function Home() {
                   <input
                     type="text"
                     className="form-control bg-secondary border-0 py-4 px-3"
-                    placeholder="Lastname  of invitee"
+                    placeholder="Enter secret code"
                     onChange={(e) => setPass(e.target.value)}
                     value={pass}
                   />

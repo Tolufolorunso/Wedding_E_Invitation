@@ -4,7 +4,7 @@ import fetchApi from '@/utils/fetch-api';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 
-function Rsvp({ name, id }) {
+function Rsvp({ fullname, id }) {
   const [data, setData] = useState({
     numberOfGuest: 0,
     rsvp: 'Undecided Yet',
@@ -20,9 +20,6 @@ function Rsvp({ name, id }) {
   const submitRsvp = async (e) => {
     e.preventDefault();
     setLoading(true);
-
-    console.log(1, id, data);
-
     try {
       const res = await fetchApi('/', 'PATCH', {
         id,
@@ -49,7 +46,10 @@ function Rsvp({ name, id }) {
           >
             RSVP
           </h6>
-          <h1 className="font-secondary display-4">Join Our Party</h1>
+          <h1 className="font-secondary display-5">
+            Join Our Party: <br />
+            <span className="small">{fullname}</span>
+          </h1>
           <i className="far fa-heart text-dark"></i>
         </div>
         <div className="row justify-content-center">
@@ -61,7 +61,7 @@ function Rsvp({ name, id }) {
                     <input
                       type="text"
                       className="form-control bg-secondary border-0 py-4 px-3"
-                      value={name}
+                      value={fullname}
                       readOnly
                       disabled
                     />

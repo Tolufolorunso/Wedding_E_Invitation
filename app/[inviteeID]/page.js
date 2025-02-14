@@ -57,8 +57,8 @@ async function InvitationPage({ params }) {
                       style={{ letterSpacing: '2px' }}
                     >
                       You're cordially Invited: <br />
-                      <span className="pt-1 small font-italic">
-                        {`${invitee.firstname} ${invitee.lastname}`}
+                      <span className="pt-1 small font-italic bg-dark">
+                        {`${invitee.fullname}`}
                       </span>
                     </h3>
                   </div>
@@ -101,7 +101,7 @@ async function InvitationPage({ params }) {
               </div>
             </div>
           </div>
-          <a
+          {/* <a
             className="carousel-control-prev justify-content-start"
             href="#header-carousel"
             data-slide="prev"
@@ -124,7 +124,7 @@ async function InvitationPage({ params }) {
             >
               <span className="carousel-control-next-icon mt-3"></span>
             </div>
-          </a>
+          </a> */}
         </div>
       </div>
       {/* Carousel End  */}
@@ -274,10 +274,12 @@ async function InvitationPage({ params }) {
                   <p className="text-uppercase mb-2">25th August, 2019</p>
                   <p className="m-0">
                     On August 25th, 2019, two paths crossed and a beautiful
-                    story unfolded. It was the day our hearts first connected,
-                    sparking a journey of love, laughter, and endless
-                    possibilities. Little did we know, that moment would change
-                    everything.
+                    story unfolded. We met on this blessed Sunday evening, when
+                    I was coming from AYF Joint Fellowship from Messiah Anglican
+                    with a friend Mr. Gbenga Ogundipe. It was the day our hearts
+                    first connected, sparking a journey of love, laughter, and
+                    endless possibilities. Little did we know, that moment would
+                    change everything.
                   </p>
                 </div>
               </div>
@@ -379,7 +381,7 @@ async function InvitationPage({ params }) {
             >
               Event
             </h6>
-            <h1 className="font-secondary display-4">Our Wedding Event</h1>
+            <h1 className="font-secondary display-4">Our Wedding Events</h1>
             <i className="far fa-heart text-dark"></i>
           </div>
           <div className="row justify-content-center">
@@ -389,8 +391,8 @@ async function InvitationPage({ params }) {
                 <span className="text-primary">Oluwafemi</span> and{' '}
                 <span className="text-primary">Adesewa</span> in an
                 unforgettable evening of love, laughter, and joy. Surrounded by
-                friends and family, we will exchange our vows and begin our new
-                life together.
+                families and friends, we will exchange our vows and begin our
+                new life together.
               </h5>
             </div>
           </div>
@@ -403,7 +405,7 @@ async function InvitationPage({ params }) {
                   @St. Peter's Anglican Church, Ipere Ekiti,Ilejemeje LG.
                   Nigeria
                 </p>
-                <p className="mb-0">Time: 8:00am</p>
+                <p className="mb-0">Time: 9:00am</p>
               </div>
             </div>
             <div className="col-md-6">
@@ -413,7 +415,7 @@ async function InvitationPage({ params }) {
                 <p className="mb-2">
                   @ Ijemo Street, Ipere Ekiti Ekiti, Nigeria
                 </p>
-                <p className="mb-0">12:00AM - 13:00PM</p>
+                <p className="mb-0">12:00 pm</p>
               </div>
             </div>
           </div>
@@ -426,10 +428,7 @@ async function InvitationPage({ params }) {
       {/* Friends & Family End */}
 
       {/* RSVP Start */}
-      <Rsvp
-        id={invitee._id}
-        name={`${invitee.firstname.toUpperCase()} ${invitee.lastname.toUpperCase()}`}
-      />
+      <Rsvp id={invitee._id} fullname={`${invitee.fullname.toUpperCase()}`} />
       {/* RSVP End */}
 
       {/* Footer Start */}

@@ -1,12 +1,13 @@
-"use client";
-import fetchApi from "@/utils/fetch-api";
-import { useRouter } from "next/navigation";
-import React, { useState } from "react";
-import { toast } from "react-toastify";
+'use client';
+import fetchApi from '@/utils/fetch-api';
+import { useRouter } from 'next/navigation';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 function AddInviteeForm() {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [title, setTitle] = useState('Mr');
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
@@ -16,26 +17,37 @@ function AddInviteeForm() {
     setLoading(true);
 
     try {
-      const res = await fetchApi("/", "POST", {
+      const res = await fetchApi('/', 'POST', {
         firstname,
         lastname,
+        title,
       });
-      toast.success(res.message || "Invitation added successfully!");
+      toast.success(res.message || 'Invitation added successfully!');
       setTimeout(() => {
         router.refresh();
       }, 2000);
     } catch (error) {
-      console.log(error);
-      toast.error(error?.message || "Something went wrong, please try again.");
+      toast.error(error?.message || 'Something went wrong, please try again.');
     } finally {
-      setFirstname("");
-      setLastname("");
+      setFirstname('');
+      setLastname('');
+      setTitle('Mr');
       setLoading(false);
     }
   };
 
   return (
     <form>
+      <div className="form-group">
+        <input
+          type="text"
+          className="form-control bg-secondary border-0 py-4 px-3"
+          placeholder="Mr, Dr, Engr..."
+          onChange={(e) => setTitle(e.target.value)}
+          value={title}
+          required
+        />
+      </div>
       <div className="form-group">
         <input
           type="text"
@@ -63,7 +75,7 @@ function AddInviteeForm() {
           onClick={addInvitee}
           disabled={!firstname || !lastname}
         >
-          {loading ? "Adding Invitation..." : "Add Invitation"}
+          {loading ? 'Adding Invitation...' : 'Add Invitation'}
         </button>
       </div>
     </form>
