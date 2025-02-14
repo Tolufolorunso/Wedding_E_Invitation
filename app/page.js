@@ -4,11 +4,13 @@ import { useState } from 'react';
 
 export default function Home() {
   const [pass, setPass] = useState();
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const pin = 20250405;
 
   const login = () => {
     if (pin === Number(pass)) {
+      setLoading(true);
       localStorage.clear();
       localStorage.setItem('pass', 'pass');
       return router.replace('/invitation-page');
@@ -41,7 +43,7 @@ export default function Home() {
                     type="button"
                     onClick={login}
                   >
-                    login
+                    {loading ? 'Login in...' : 'Login'}
                   </button>
                 </div>
               </form>

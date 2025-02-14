@@ -13,7 +13,6 @@ function Rsvp({ fullname, id }) {
   const [loading, setLoading] = useState(false);
 
   const handleOnchange = (e) => {
-    console.log(e.target.name);
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
@@ -26,6 +25,7 @@ function Rsvp({ fullname, id }) {
         ...data,
       });
       toast.success(res.message || 'RSVP added successfully!');
+      setLoading(false);
     } catch (error) {
       console.log(error);
       toast.error(error?.message || 'Something went wrong, please try again.');
@@ -117,7 +117,7 @@ function Rsvp({ fullname, id }) {
                     className="btn btn-primary font-weight-bold py-3 px-5"
                     type="submit"
                   >
-                    Submit
+                    {loading ? 'Sending...' : 'Submit'}
                   </button>
                 </div>
               </form>
