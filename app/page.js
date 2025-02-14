@@ -5,7 +5,7 @@ import { useState } from 'react';
 export default function Home() {
   const [pass, setPass] = useState();
   const router = useRouter();
-  const pin = 555;
+  const pin = 20250405;
 
   const login = () => {
     if (pin === Number(pass)) {
