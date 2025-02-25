@@ -2,11 +2,13 @@
 import { toast } from 'react-toastify';
 
 const Table = ({ data }) => {
-  const handleCopy = (url) => {
-    navigator.clipboard.writeText(url).then(() => {
+  const handleCopy = (url, fullname) => {
+    const text = `${fullname} - ${url}`;
+    navigator.clipboard.writeText(text).then(() => {
       toast.info('URL copied to clipboard!');
     });
   };
+
   data = JSON.parse(data);
 
   return (
@@ -39,7 +41,7 @@ const Table = ({ data }) => {
               <td>
                 <button
                   className="btn btn-primary font-weight-bold py-2 px-3"
-                  onClick={() => handleCopy(item.url)}
+                  onClick={() => handleCopy(item.url, item.fullname)}
                 >
                   Copy
                 </button>

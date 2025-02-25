@@ -11,7 +11,6 @@ async function InvitationPage({ params }) {
   await connectMongoDB();
 
   let invitee = await Invitee.findById(inviteeID);
-  console.log(invitee);
 
   if (!invitee) {
     return redirect(`/contact`);
