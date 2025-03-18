@@ -8,12 +8,12 @@ export async function POST(request) {
   const baseURL = request.nextUrl.origin;
   await connectMongoDB();
 
-  if (!firstname || !lastname) {
-    return Response.json(
-      { status: false, errorMessage: 'Please provide all fields' },
-      { status: 400 }
-    );
-  }
+  // if (!firstname || !lastname) {
+  //   return Response.json(
+  //     { status: false, errorMessage: 'Please provide all fields' },
+  //     { status: 400 }
+  //   );
+  // }
 
   firstname =
     firstname.charAt(0).toUpperCase() + firstname.slice(1).toLowerCase();
@@ -36,6 +36,7 @@ export async function POST(request) {
       { status: 201 }
     );
   } catch (error) {
+    console.log(error);
     return Response.json(
       { status: false, errorMessage: 'Something went wrong' },
       { status: 500 }
