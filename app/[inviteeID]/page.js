@@ -444,23 +444,30 @@ async function InvitationPage({ params }) {
           <div className="d-flex justify-content-center mb-4">
             <a
               className="btn btn-lg btn-outline-light btn-lg-square mr-2"
-              href="#"
+              href="https://x.com/Developer_Tolu"
+              target="_blank"
             >
               <i className="fab fa-twitter"></i>
             </a>
             <a
               className="btn btn-lg btn-outline-light btn-lg-square mr-2"
-              href="#"
+              href="https://www.facebook.com/Tolu4you"
+              target="_blank"
             >
               <i className="fab fa-facebook-f"></i>
             </a>
             <a
               className="btn btn-lg btn-outline-light btn-lg-square mr-2"
-              href="#"
+              href="https://www.linkedin.com/in/tolufolorunso/"
+              target="_blank"
             >
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a className="btn btn-lg btn-outline-light btn-lg-square" href="#">
+            <a
+              className="btn btn-lg btn-outline-light btn-lg-square"
+              href="https://www.instagram.com/developer_tolu/"
+              target="_blank"
+            >
               <i className="fab fa-instagram"></i>
             </a>
           </div>
