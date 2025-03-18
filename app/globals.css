@@ -9871,23 +9871,24 @@ a:hover {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 50px;
   padding: 20px;
 }
 
 .gallery-item {
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   background: #fff;
   position: relative;
+  border: 5px solid white;
 }
 
 .image-container {
   position: relative;
-  height: 200px;
+  height: 400px;
 }
 
 .image-container img {

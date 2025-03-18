@@ -1,8 +1,10 @@
 'use client';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 function Nav({ id }) {
+  const [isNavMobileOpen, setIsNavMobileOpen] = useState(false);
   const route = useRouter();
   const navigate = () => {
     route.push(`/gallery?id=${id}`);
@@ -19,11 +21,14 @@ function Nav({ id }) {
         className="navbar-toggler"
         data-toggle="collapse"
         data-target="#navbarCollapse"
+        onClick={() => setIsNavMobileOpen(!isNavMobileOpen)}
       >
         <span className="navbar-toggler-icon"></span>
       </button>
       <div
-        className="collapse navbar-collapse justify-content-between"
+        className={`${
+          !isNavMobileOpen && 'collapse'
+        } navbar-collapse justify-content-between`}
         id="navbarCollapse"
       >
         <div className="navbar-nav ml-auto py-0">

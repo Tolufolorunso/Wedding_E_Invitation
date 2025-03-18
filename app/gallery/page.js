@@ -66,7 +66,7 @@ function GalleryContent() {
           <motion.div
             className="gallery-item"
             key={index}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.95 }}
           >
             <div className="image-container">
