@@ -13,7 +13,7 @@ function Nav({ id }) {
     <nav className="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
       <a href="index.html" className="navbar-brand d-block d-lg-none">
         <h1 className="font-secondary text-white mb-n2">
-          Fẹ́mi <span className="text-primary">&</span> Ṣẹwà
+          Fẹ́mi <span className="text-primary">&</span> Sẹwà
         </h1>
       </a>
       <button
@@ -39,13 +39,11 @@ function Nav({ id }) {
           <a href="#story" className="nav-item nav-link">
             Story
           </a>
-          <span onClick={navigate} className="nav-item nav-link cursor-pointer">
-            Gallery
-          </span>
+          <span className="nav-item nav-link cursor-pointer">Gallery</span>
         </div>
         <div href="/" className="navbar-brand mx-5 d-none d-lg-block">
           <h1 className="font-secondary text-white mb-n2">
-            Fẹ́mi <span className="text-primary">&</span> Ṣẹwà
+            Fẹ́mi <span className="text-primary">&</span> Sẹwà
           </h1>
         </div>
         <div className="navbar-nav mr-auto py-0">
