@@ -110,7 +110,7 @@ function FamilyFriend() {
                 } font-weight-bold m-1 py-2 px-4`}
                 onClick={() => setType('bride')}
               >
-                Bridesmaid
+                Bridesmaids
               </li>
             </ul>
           </div>

@@ -40,7 +40,7 @@ async function InvitationPage({ params }) {
               <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div className="p-3" style={{ maxWidth: '900px' }}>
                   <h1 className="display-1 font-secondary text-white mt-n3 mb-md-4">
-                    Femi & Sewa
+                    Fẹ́mi & Ṣẹwà
                   </h1>
                   <div className="d-inline-block border-top border-bottom border-light py-3 px-4">
                     <h3
@@ -77,7 +77,7 @@ async function InvitationPage({ params }) {
               <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div className="p-3" style={{ maxWidth: '900px' }}>
                   <h1 className="display-1 font-secondary text-white mt-n3 mb-md-4">
-                    Jack & Rose
+                    Fẹ́mi & Ṣẹwà
                   </h1>
                   <div className="d-inline-block border-top border-bottom border-light py-3 px-4">
                     <h3
