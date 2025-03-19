@@ -107,6 +107,13 @@ const friends = [
     social: ['#x', '#facebook', '#Linkedin', '#instergram'],
     type: 'groom',
   },
+  {
+    name: 'Engr Olayinka Oni',
+    img: 'img/yinka.jpg',
+    friend: "Groom's friend",
+    social: ['#x', '#facebook', '#Linkedin', '#instergram'],
+    type: 'groom',
+  },
 ];
 
 export const babies = [
