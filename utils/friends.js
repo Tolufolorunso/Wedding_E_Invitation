@@ -79,13 +79,13 @@ const friends = [
     social: ['#x', '#facebook', '#Linkedin', '#instergram'],
     type: 'bride',
   },
-  // {
-  //   name: 'Mr Akeem Ibrahim',
-  //   img: 'https://placehold.co/600x400',
-  //   friend: "Groom's friend",
-  //   social: ['#x', '#facebook', '#Linkedin', '#instergram'],
-  //   type: 'groom',
-  // },
+  {
+    name: 'Otunba Kunle Bamidele',
+    img: 'img/kunle.jpg',
+    friend: "Groom's friend",
+    social: ['#x', '#facebook', '#Linkedin', '#instergram'],
+    type: 'groom',
+  },
   {
     name: 'Ms Helen Jeje',
     img: 'img/helen.jpg',
@@ -100,13 +100,7 @@ const friends = [
   //   social: ['#x', '#facebook', '#Linkedin', '#instergram'],
   //   type: 'groom',
   // },
-  {
-    name: 'Otunba Kunle Bamidele',
-    img: 'img/pisaro.jpg',
-    friend: "Groom's friend",
-    social: ['#x', '#facebook', '#Linkedin', '#instergram'],
-    type: 'groom',
-  },
+
   {
     name: 'Engr Olayinka Oni',
     img: 'img/yinka.jpg',
