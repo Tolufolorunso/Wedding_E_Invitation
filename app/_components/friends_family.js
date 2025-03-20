@@ -61,14 +61,6 @@ function FamilyFriend() {
                 <div
                   className="col-lg-6 col-md-6  portfolio-item first"
                   key={index}
-                  style={{
-                    display:
-                      type === ''
-                        ? 'block'
-                        : type === friend.type
-                        ? 'block'
-                        : 'none',
-                  }}
                 >
                   <div className="position-relative mb-2">
                     <div style={{ height: '500px' }}>

@@ -49,7 +49,7 @@ const friends = [
     img: 'img/boluwade.jpg',
     friend: "Bride's friend",
     social: ['#x', '#facebook', '#Linkedin', '#instergram'],
-    type: 'groom',
+    type: 'bride',
   },
   {
     name: 'Prince Adeola Adewale',
@@ -77,7 +77,7 @@ const friends = [
     img: 'img/zakiyat.jpg',
     friend: "Bride's friend",
     social: ['#x', '#facebook', '#Linkedin', '#instergram'],
-    type: 'groom',
+    type: 'bride',
   },
   // {
   //   name: 'Mr Akeem Ibrahim',
@@ -114,6 +114,27 @@ const friends = [
     social: ['#x', '#facebook', '#Linkedin', '#instergram'],
     type: 'groom',
   },
+  {
+    name: 'Dr Ibrahim Akeem Oluwaseyi',
+    img: 'img/accuracy.jpg',
+    friend: "Groom's friend",
+    social: ['#x', '#facebook', '#Linkedin', '#instergram'],
+    type: 'groom',
+  },
+  {
+    name: 'Officer Atoki Joshua',
+    img: 'img/atoki.jpg',
+    friend: "Groom's friend",
+    social: ['#x', '#facebook', '#Linkedin', '#instergram'],
+    type: 'groom',
+  },
+  {
+    name: 'Engr Tope Akinola',
+    img: 'img/akinola.jpg',
+    friend: "Groom's friend",
+    social: ['#x', '#facebook', '#Linkedin', '#instergram'],
+    type: 'groom',
+  },
 ];
 
 export const babies = [
@@ -122,14 +143,14 @@ export const babies = [
     img: 'img/ireoluwa.jpg',
     friend: 'Little Bride',
     social: ['#x', '#facebook', '#Linkedin', '#instergram'],
-    type: 'bride',
+    type: '',
   },
   {
     name: 'Prince Henry Erinle',
     img: 'img/ringbearer.jpg',
     friend: 'Ring Bearer',
     social: ['#x', '#facebook', '#Linkedin', '#instergram'],
-    type: 'bride',
+    type: '',
   },
 ];
 
