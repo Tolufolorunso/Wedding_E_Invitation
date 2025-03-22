@@ -186,7 +186,7 @@ async function InvitationPage({ params }) {
               <img
                 className="position-absolute w-100 h-100"
                 src="img/about-1.jpg"
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'cover', objectPosition: 'top' }}
                 alt="about-1"
               />
             </div>
@@ -199,7 +199,7 @@ async function InvitationPage({ params }) {
               <img
                 className="position-absolute w-100 h-100"
                 src="img/about-2.jpg"
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'cover', objectPosition: 'top' }}
                 alt="about-2"
               />
             </div>
@@ -297,36 +297,20 @@ async function InvitationPage({ params }) {
                   </p>
                 </div>
               </div>
-              <div
-                className="col-md-6 text-center text-md-left"
-                style={{ width: '300px !important', height: '300px' }}
-              >
+              <div className="col-md-6 text-center text-md-left storyContainer">
                 <img
                   className="img-fluid ml-md-3"
                   src="img/story-2.jpg"
                   alt=""
-                  style={{
-                    width: '100% !important',
-                    height: '100%',
-                    objectFit: 'cover',
-                  }}
                 />
               </div>
             </div>
             <div className="row">
-              <div
-                className="col-md-6 text-center text-md-right"
-                style={{ width: '300px !important', height: '300px' }}
-              >
+              <div className="col-md-6 text-center text-md-right storyContainer">
                 <img
                   className="img-fluid mr-md-3"
                   src="img/story-3.jpg"
                   alt=""
-                  style={{
-                    width: '100% !important',
-                    height: '100%',
-                    objectFit: 'cover',
-                  }}
                 />
               </div>
               <div className="col-md-6 text-center text-md-left">
