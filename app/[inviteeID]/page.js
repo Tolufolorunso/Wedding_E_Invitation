@@ -341,7 +341,7 @@ async function InvitationPage({ params }) {
                   </p>
                 </div>
               </div>
-              <div className="col-md-6 text-center text-md-left">
+              <div className="col-md-6 text-center text-md-left storyContainer">
                 <img
                   className="img-fluid ml-md-3"
                   src="img/story-4.jpg"
